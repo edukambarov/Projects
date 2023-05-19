@@ -8,9 +8,9 @@ int num2 = Convert.ToInt32(Console.ReadLine());
 int max = num1;
 if (num2 > max)
 {
-    Console.WriteLine ($"{num2} является наибольшим из заданных чисел.");
+    Console.WriteLine ($"{num2} является большим из заданных чисел, {num1} является меньшим.");
 }
 else 
 {
-    Console.WriteLine ($"{num1} является наибольшим из заданных чисел.");
+    Console.WriteLine ($"{num1} является большим из заданных чисел, {num2} является меньшим.");
 }
