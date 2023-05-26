@@ -4,18 +4,33 @@
 // 5 -> 1, 4, 9, 16, 25.
 // 2 -> 1,4
 
-Console.Write("Введите наутральное число: ");
-int number = Convert.ToInt32(Console.ReadLine());
+// Console.Write("Введите наутральное число: ");
+// int number = Convert.ToInt32(Console.ReadLine());
 
-WriteLinesSquare(number);
+// WriteLinesSquare(number);
 
-void WriteLinesSquare(int number)
+// void WriteLinesSquare(int number)
+// {
+//     int i = 1;
+//     while (i <= number)
+//     {
+//         int square = i * i;
+//         Console.WriteLine($"{i} -> {square}");
+//         i++;
+//     }
+// }
+
+Console.WriteLine("Введите натуральное число");
+int num = Convert.ToInt32(Console.ReadLine());
+
+SqrTable(num);
+
+void SqrTable(int n)
 {
-    int i = 1;
-    while (i <= number)
+    int count = 1;
+    while (count <= n)
     {
-        int square = i * i;
-        Console.WriteLine($"{i} -> {square}");
-        i++;
-    }
+        Console.WriteLine($"{count,3 } -> {count*count, 4}");
+        count++;
+  }
 }
