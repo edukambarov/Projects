@@ -30,5 +30,4 @@ int MaxDigit(int num) // num = number
     int firstDigit = num / 10;
     int secondDigit = num % 10;
     int maxDigit = firstDigit > secondDigit ? firstDigit : secondDigit;
-    return maxDigit;
-]
+    return ma

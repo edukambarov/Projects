@@ -4,6 +4,16 @@
 // 782 -> 8
 // 918 -> 1
 
+int number = FromStringToInt("Введите целое трёхзначное число: ");
+
+if (Math.Abs(number) < 100 ||  Math.Abs(number) > 999)
+{ 
+ Console.WriteLine("Введены некорректные данные");
+ return;
+}
+ int secondDigit = FindSecondDigit(number);
+ Console.WriteLine($"Второй цифрой заданного числа {number} является цифра {secondDigit}.");
+
 int FromStringToInt(string message)
 {
     System.Console.Write(message);
@@ -18,14 +28,6 @@ int FindSecondDigit(int num)
      int result2 = twofirstDigits % 10;
      return result2;
 }
-int number = FromStringToInt("Введите целое трёхзначное число: ");
 
-if (Math.Abs(number) < 100 ||  Math.Abs(number) > 999)
-{ 
- Console.WriteLine("Введены некорректные данные");
- return;
-}
- int secondDigit = FindSecondDigit(number);
- Console.WriteLine($"Второй цифрой заданного числа {number} является цифра {secondDigit}.");
 
 
