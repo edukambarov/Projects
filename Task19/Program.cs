@@ -5,24 +5,19 @@
 // 12821 -> да
 // 23432 -> да
 
-int number = FromStringToInt("Введите число: ");
-int length = (Console.ReadLine());
 
 
-int ReverseNumber(int number);
-
-    int numberStart = number / 10;
-    int numberEnd = number % 10;
-
-while (iEnd>iStart)
-{
-    iEnd = iEnd - 1;
-    iStart = iStart + 1;
-    break;
-}
-
-return number
-
+    int number = FromStringToInt("Введите число: ");
+    int reverse = Reverse(number);
+    if (number==reverse)
+    {
+        Console.WriteLine($"Заданное число {number} является полиндромом.");
+    }
+    else
+    {
+        Console.WriteLine($"Заданное число {number} не является полиндромом.");
+    }         
+    
 int FromStringToInt(string message)
 {
     System.Console.Write(message);
@@ -31,5 +26,16 @@ int FromStringToInt(string message)
     return result1;
 }
 
-    
+int Reverse(int number)
+{
+    int reminder = 0;
+    int reverse = 0;
 
+while (number > 0)
+            {
+                reminder = number % 10;
+                reverse = (reverse * 10) + reminder;
+                number = number / 10;
+            }
+            return reverse;
+}
