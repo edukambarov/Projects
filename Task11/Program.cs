@@ -8,13 +8,30 @@
 int number = new Random().Next(100, 1000);
 Console.WriteLine($"Случайное число из отрезка [100, 999] -> {number}");
 
-int res = DeleteSecondDigit(number);
-Console.WriteLine($"Итог -> {res}");
-
-int DeleteSecondDigit(int num)
+if (num < 1)
 {
-    int firstDigit = num / 100;
-    int lastDigit = num % 10;
-    int result = firstDigit * 10 + lastDigit;
-    return result;
+        Console.WriteLine("Некорректный ввод.");
+}
+else
+{
+    int i = 2;
+    while (i <= num)
+    {
+        Console.Write($"{i} ");
+        i=i+2;
+    }
+}
+
+if (num < 1)
+{
+        Console.WriteLine("Некорректный ввод.");
+}
+else
+{
+    int i = 2;
+    while (i <= num)
+    {
+        Console.Write($"{i} ");
+        i=i+2;
+    }
 }
