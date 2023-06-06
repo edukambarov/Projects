@@ -21,7 +21,7 @@ Console.WriteLine($"Cумма отрицательных элементов ра
 // Console.WriteLine($"Сумма положительных элементов равна {sumPositiveNegativeElem[0]}.");
 // Console.WriteLine($"Сумма отрицательных элементов равна {sumPositiveNegativeElem[1]}.");
 
-int[] CreateArrayRndInt(int size, int max, int min)
+int[] CreateArrayRndInt(int size, int min, int max)
 {
     int[] arr = new int[size];
     Random rnd = new Random();

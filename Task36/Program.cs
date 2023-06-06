@@ -10,7 +10,7 @@ int maxValue = FromStringToInt("Укажите максимальное знач
 int[] array = CreateArray(size, minValue, maxValue);
 int sumIfOddIndex = SumIfOddIndex(array);
 PrintArray(array);
-Console.Write($"-> {sumIfOddIndex}");
+Console.Write($" -> {sumIfOddIndex}");
 
 int FromStringToInt(string message)
 {

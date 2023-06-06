@@ -4,7 +4,7 @@
 
 int size = 7;
 int[] array = CreateArray(size, 100, 999);
-int countEvenNumbers = CountEvenNumbers (array);
+int countEvenNumbers = CountEvenNumbers(array);
 PrintArray(array);
 Console.Write($"-> {countEvenNumbers}");
 
@@ -33,7 +33,7 @@ void PrintArray(int[] arr)
     Console.Write("]");
 }
 
-int CountEvenNumbers (int[] arr) 
+int CountEvenNumbers(int[] arr) 
 {
     int count = 0;
     for (int i = 0; i < arr.Length-1; i++)
