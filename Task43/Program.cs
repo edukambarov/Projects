@@ -14,8 +14,11 @@ double b1 = FromStringToDouble("Введите параметр (констан�
 double k1 = FromStringToDouble("Введите коэффициент k для первой прямой: ");
 double b2 = FromStringToDouble("Введите параметр (константу) b для второй прямой: ");
 double k2 = FromStringToDouble("Введите коэффициент k для второй прямой: ");
-double y = FindIntersectionCoordinateY(k1, k2, b1, b2);
-double x = FindIntersectionCoordinateX(y, k1, b1);
+// double y = FindIntersectionCoordinateY(k1, k2, b1, b2);
+// double x = FindIntersectionCoordinateX(y, k1, b1);
+double x = FindIntersectionX(k1, k2, b1, b2);
+double y = FindIntersectionY(x, k1, b1);
+
 if (CheckInputData (k1, k2, b1, b2))
 {
     Console.WriteLine($"Точкой пересечения прямых с заданными b1 = {b1}, k1 = {k1}, b2 = {b2}, k2 = {k2} является точка с координатами ({Math.Round(x,1)}; {Math.Round(y,1)})");
@@ -48,14 +51,26 @@ bool CheckInputData (double a1, double a2, double c1, double c2)
     return true;
 }
 
-double FindIntersectionCoordinateY(double a1, double a2, double c1, double c2)
+// double FindIntersectionCoordinateY(double a1, double a2, double c1, double c2)
+// {
+//     double y = (a2 * c1 - a1 * c2) / (a2 - a1);
+//     return y;
+// }
+
+// double FindIntersectionCoordinateX(double y, double a1, double c1)
+// {
+//     double x = (y - c1)/a1;
+//     return x;
+// }
+
+double FindIntersectionX(double a1, double a2, double c1, double c2)
 {
-    double y = (a2 * c1 - a1 * c2) / (a2 - a1);
-    return y;
+    double x = (c2 - c1) / (a1 - a2);
+    return x;
 }
 
-double FindIntersectionCoordinateX(double y, double a1, double c1)
+double FindIntersectionY(double x, double a1, double c1)
 {
-    double x = (y - c1)/a1;
-    return x;
+    double y = a1 * x + c1;
+    return y;
 }
