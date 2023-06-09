@@ -18,7 +18,7 @@ PrintArrayDouble(result);
 
 double[] FillArrayWithColumnsMeans(int[,] matrix, int min, int max)
 {
-    double[] arr = new double[array2d.GetLength(1)];
+    double[] arr = new double[matrix.GetLength(1)];
     Random rnd = new Random();
     for (int j = 0; j < matrix.GetLength(1); j++)
     {
