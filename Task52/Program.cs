@@ -20,12 +20,12 @@ double[] FillArrayWithColumnsMeans(int[,] matrix, int min, int max)
 {
     double[] arr = new double[array2d.GetLength(1)];
     Random rnd = new Random();
-        for (int j = 0; j < matrix.GetLength(1); j++)
+    for (int j = 0; j < matrix.GetLength(1); j++)
     {
         double sum = 0;
         for (int i = 0; i < matrix.GetLength(0); i++)
         {
-            sum = sum + matrix[i,j];
+            sum = sum + matrix[i, j];
         }
         arr[j] = sum / matrix.GetLength(0);
     }
