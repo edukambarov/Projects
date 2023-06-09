@@ -12,7 +12,7 @@ int rows = 4;
 int columns = 5;
 int[,] array2d = CreateMatrixRndInt(rows, columns, min, max);
 PrintMatrix(array2d);
-double[] result = FillArrayWithColumnsMeans(array2d, min, max);
+double[] result = FillArrayWithColumnsMeans(array2d);
 Console.WriteLine();
 PrintArrayDouble(result);
 
