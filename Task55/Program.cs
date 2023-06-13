@@ -13,7 +13,7 @@ PrintMatrix(array2d);
 // PrintMatrix(newarray2d);
 
 
-// int[,] TransposeMatrix(int[,] matrix) // rows = 3, columns = 4
+// int[,] TransposeMatrix(int[,] matrix)
 // {
 //     int maxSize = matrix.GetLength(0);
 //     if (matrix.GetLength(1)> maxSize) maxSize = matrix.GetLength(1);
