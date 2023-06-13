@@ -49,7 +49,7 @@ void MatrixElementExists(int[,] matrix, int rows, int columns)
         }
         else Console.Write($"Элемент c индексами [{rows},{columns}] не существует.");
     }
-    else Console.Write("Индекс элемента массива не может быть отпицательным. Введите неотрицательное число.");
+    else Console.Write("Индекс элемента массива не может быть отрицательным. Введите неотрицательное число.");
 }
 
 int FromStringToInt(string message)
