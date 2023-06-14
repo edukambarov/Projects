@@ -11,21 +11,13 @@ int[,] array2dA = CreateMatrixRndInt(4, 2, 1, 10);
 Console.WriteLine("Матрица А: ");
 PrintMatrix(array2dA);
 Console.WriteLine("");
-int[,] array2dB = CreateMatrixRndInt(2, 3, 1, 10);
+int[,] array2dB = CreateMatrixRndInt(3, 3, 1, 10);
 Console.WriteLine("Матрица B: ");
 PrintMatrix(array2dB);
 Console.WriteLine("");
-MatrixProductExists(array2dA, array2dB);
 int[,] array2dAxB = MatrixProduct(array2dA, array2dB);
-PrintMatrix(array2dAxB);
+PrintMatrixIfExists(array2dAxB, array2dA, array2dB);
 
-
-void MatrixProductExists(int[,] matrix1, int[,] matrix2)
-{
-    if (matrix1.GetLength(1) == matrix2.GetLength(0))
-        Console.WriteLine("Произведение матрицы А на матрицу В выглядит следующим образом:");
-    else Console.WriteLine("Невозможно вычислить произведение матрицы А на матрицу В. Число столбцов матрицы А не совпадает с  числом строк матрицы В.");
-}
 
 int[,] MatrixProduct(int[,] matrix1, int[,] matrix2)
 {
@@ -56,6 +48,24 @@ int[,] CreateMatrixRndInt(int rows, int columns, int min, int max) // rows = 3, 
         }
     }
     return matrix;
+}
+
+void PrintMatrixIfExists(int[,] matrix, int[,] matrix1, int[,] matrix2)
+{
+    if (matrix1.GetLength(1) != matrix2.GetLength(0))
+        Console.WriteLine("Невозможно произвести умножение матрицы А на матрицу В. Количество столбцов матрицы А должно совпадать с количеством строк матрицы В.");
+    else
+    {
+        Console.WriteLine("Произведение матрицы А на матрицу В выглядит следующим образом:");
+        for (int i = 0; i < matrix.GetLength(0); i++)
+        {
+            for (int j = 0; j < matrix.GetLength(1); j++)
+            {
+                Console.Write($"{matrix[i, j],6}");
+            }
+            Console.WriteLine();
+        }
+    }
 }
 
 void PrintMatrix(int[,] matrix)
