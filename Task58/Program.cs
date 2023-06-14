@@ -11,7 +11,7 @@ int[,] array2dA = CreateMatrixRndInt(4, 2, 1, 10);
 Console.WriteLine("Матрица А: ");
 PrintMatrix(array2dA);
 Console.WriteLine("");
-int[,] array2dB = CreateMatrixRndInt(3, 3, 1, 10);
+int[,] array2dB = CreateMatrixRndInt(2, 3, 1, 10);
 Console.WriteLine("Матрица B: ");
 PrintMatrix(array2dB);
 Console.WriteLine("");
