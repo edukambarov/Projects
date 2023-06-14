@@ -33,22 +33,7 @@ void BubbleSortRowsOfMatrix(int[,] matrix)
         }
     }
 }
-    // void BubbleSortRow(int[] array)
-    // {
-    //     for (int j = 0; j < array.Length; j++)
-    //     {
-    //         for (int k = j + 1; k < array.Length; k++)
-    //         {
-    //             if (array[k] >= array[k - 1])
-    //             {
-    //                 int temp = array[k - 1];
-    //                 array[k - 1] = array[k];
-    //                 array[k] = temp;
-    //             }
-    //         }
-    //     }
-    // }
-
+    
     int[,] CreateMatrixRndInt(int rows, int columns, int min, int max) // rows = 3, columns = 4
     {
         int[,] matrix = new int[rows, columns];
