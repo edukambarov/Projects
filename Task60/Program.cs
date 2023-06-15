@@ -8,22 +8,22 @@
 int rows = 2;
 int columns = 2;
 int depth = 2;
-int[,,] array3d = CreateAndFillMatrix3D(rows, columns, depth);
+int[,,] array3d = CreateAndFillMatrix3D(rows, columns, depth, 10, 99);
 Print3dMatrixElementWithIndex(array3d);
 
-int[,,] CreateAndFillMatrix3D(int rows, int columns, int depth)
+int[,,] CreateAndFillMatrix3D(int rows, int columns, int depth, int min, int max)
 {
     int[,,] matrix = new int[rows, columns, depth];
-    int a = 1;
-    int b = columns;
-    int c = columns*rows;
     for (int i = 0; i < matrix.GetLength(0); i++)
     {
         for (int j = 0; j < matrix.GetLength(1); j++)
         {
             for (int k = 0; k < matrix.GetLength(2); k++)
             {
-               matrix[i, j, k] = 10 + i*a + j*b + k*c;
+                int a = 1;
+                int b = columns;
+                int c = columns * rows;
+                matrix[i, j, k] = 10 + i * a + j * b + k * c;
             }
         }
     }
@@ -39,7 +39,7 @@ void Print3dMatrixElementWithIndex(int[,,] matrix)
             for (int k = 0; k < matrix.GetLength(2); k++)
             {
                 Console.Write($"{matrix[i, j, k]}({i},{j},{k}) ");
-            }            
+            }
         }
         Console.WriteLine();
     }
