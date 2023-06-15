@@ -9,7 +9,7 @@ int size = 4;
 int[,] squareMatrix = SpiralMatrix(size, size);
 PrintMatrix(squareMatrix);
 
-int[,] SpiralMatrix (int rows, int columns)
+int[,] SpiralMatrix(int rows, int columns)
 {
     int[,] matrix = new int[rows, columns];
     int mini = 0;
@@ -22,24 +22,24 @@ int[,] SpiralMatrix (int rows, int columns)
     while (path <= matrix.GetLength(0) * matrix.GetLength(1) &&
            i <= maxi &&
            j <= maxj)
-     {   
+    {
         for (i = mini; j < maxj; j++)
         {
             path++;
             matrix[i, j] = path;
-            
+
         }
         mini++;
         for (j = maxj; i < maxi; i++)
         {
             path++;
-            matrix[i, j] = path;            
+            matrix[i, j] = path;
         }
         maxj--;
         for (i = maxi; j > minj; j--)
         {
             path++;
-            matrix[i, j] = path;            
+            matrix[i, j] = path;
         }
         maxi--;
         for (j = minj; i > mini; i--)
@@ -55,13 +55,13 @@ int[,] SpiralMatrix (int rows, int columns)
 }
 
 void PrintMatrix(int[,] matrix)
+{
+    for (int i = 0; i < matrix.GetLength(0); i++)
     {
-        for (int i = 0; i < matrix.GetLength(0); i++)
+        for (int j = 0; j < matrix.GetLength(1); j++)
         {
-            for (int j = 0; j < matrix.GetLength(1); j++)
-            {
-                Console.Write($"{matrix[i, j],6}");
-            }
-            Console.WriteLine();
+            Console.Write($"{matrix[i, j],6}");
         }
+        Console.WriteLine();
     }
+}
