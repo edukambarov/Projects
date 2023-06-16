@@ -3,11 +3,11 @@
 // 453 -> 12
 // 45 -> 9
 
-int SumDigitsRec(int num, int sum = 0)
-{
-    if (num == 0) return sum;
-    else return sum + SumDigitsRec(num / 10, num % 10);
-}
+// int SumDigitsRec(int num, int sum = 0)
+// {
+//     if (num == 0) return sum;
+//     else return sum + SumDigitsRec(num / 10, num % 10);
+// }
 
 int SumDigitsRec1(int n)
 {
