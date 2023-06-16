@@ -17,3 +17,15 @@
 //  сумму натуральных элементов в промежутке от M до N.
 // 3 - Слушатель написал корректную программу
 //  с использованием рекурсии по вычислению функции Аккермана
+
+Console.WriteLine("Введите число: ");
+int number = Convert.ToInt32(Console.ReadLine());
+int temp = number;
+NaturalNumbersBackWards(number);
+
+void NaturalNumbersBackWards (int num) // num = 5
+{
+    if (num == 0) return;
+    NaturalNumbersBackWards (num-1);
+    Console.Write($"{temp-num+1} ");    
+}
