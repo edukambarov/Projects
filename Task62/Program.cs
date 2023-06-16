@@ -5,7 +5,7 @@
 // 11 16 15 06
 // 10 09 08 07
 
-int size = 4;
+int size = 3;
 int[,] squareMatrix = SpiralMatrix(size, size);
 PrintMatrix(squareMatrix);
 
@@ -27,7 +27,6 @@ int[,] SpiralMatrix(int rows, int columns)
         {
             path++;
             matrix[i, j] = path;
-
         }
         mini++;
         for (j = maxj; i < maxi; i++)
