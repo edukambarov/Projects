@@ -6,16 +6,6 @@
 int PowerRec(int num, int pow)
 {
     if (pow == 0) return 1;
-    else return num * PowerRec(num, pow - 1);
-}
-
-Console.WriteLine("Введите два натуральных числа: ");
-int baseNumber = Convert.ToInt32(Console.ReadLine());
-int power = Convert.ToInt32(Console.ReadLine());
-
-Console.WriteLine(PowerRec(baseNumber, power));int PowerRec(int num, int pow)
-{
-    if (pow == 0) return 1;
     return num * PowerRec(num, pow - 1);
 }
 
