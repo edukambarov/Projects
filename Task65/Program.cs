@@ -14,7 +14,7 @@ void ConsecutiveNumbersInRange(int num1, int num2)
     else if (num2 < num1)
     {
         Console.Write($"{num2}, ");
-        ConsecutiveNumbersInRange(num1, num2 + 1);
+        ConsecutiveNumbersInRange(num1 - 1, num2);
     }
     else
     {
