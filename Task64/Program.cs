@@ -20,11 +20,11 @@
 
 Console.WriteLine("Введите число: ");
 int number = Convert.ToInt32(Console.ReadLine());
-int temp = number;
 NaturalNumbersBackWards(number);
 
 void NaturalNumbersBackWards (int num) // num = 5
 {
+    int temp = number;
     if (num == 0) return;
     NaturalNumbersBackWards (num-1);
     Console.Write($"{temp-num+1} ");    

@@ -18,3 +18,27 @@
 //  сумму натуральных элементов в промежутке от M до N.
 // 3 - Слушатель написал корректную программу
 //  с использованием рекурсии по вычислению функции Аккермана
+
+Console.WriteLine("Введите 1e число: ");
+int m = Convert.ToInt32(Console.ReadLine());
+Console.WriteLine("Введите 2e число: ");
+int n = Convert.ToInt32(Console.ReadLine());
+if (n < m) 
+{
+    int temp = n;
+    n = m;
+    m = temp;
+}
+SumElementsInGap(m, n, 0);
+
+void SumElementsInGap (int number1, int number2, int sum)
+{
+    if (number1 > number2) 
+    {
+        Console.WriteLine($"Сумма натуральных элементов в промежутке от M до N: {sum}"); 
+        return;
+    }
+    sum = sum + (number2--);
+    SumElementsInGap(number1, number2, sum);
+}
+
