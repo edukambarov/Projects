@@ -20,12 +20,15 @@
 
 Console.WriteLine("Введите число: ");
 int number = Convert.ToInt32(Console.ReadLine());
-NaturalNumbersBackWards(number);
+int temp = number;
+Console.Write($"N = {number} -> '");
+NaturalNumbersBackWards(number, temp);
 
-void NaturalNumbersBackWards (int num) // num = 5
+void NaturalNumbersBackWards (int num, int numFixed) // num = 5
 {
-    int temp = number;
-    if (num == 0) return;
-    NaturalNumbersBackWards (num-1);
-    Console.Write($"{temp-num+1} ");    
+    if (num == 0) return;    
+    NaturalNumbersBackWards (num-1, numFixed);
+    if (numFixed  == num) Console.Write($"{numFixed-num+1}'");
+    else Console.Write($"{numFixed-num+1}, ");
 }
+
