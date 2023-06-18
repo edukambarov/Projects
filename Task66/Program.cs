@@ -31,7 +31,7 @@ if (n < m)
 }
 SumElementsInGap(m, n, 0);
 
-void SumElementsInGap (int number1, int number2, int sum)
+void SumElementsInGap (int number1, int number2, int sum = 0)
 {
     if (number1 > number2) 
     {
