@@ -19,10 +19,12 @@
 // 3 - Слушатель написал корректную программу
 //  с использованием рекурсии по вычислению функции Аккермана
 
-Console.WriteLine("Введите 1e число: ");
+Console.WriteLine("Введите 1e натуральное число: ");
 int m = Convert.ToInt32(Console.ReadLine());
-Console.WriteLine("Введите 2e число: ");
+if (m <=  0) Console.WriteLine("Введённое вами число не является натуральным. Повторите ввод.");
+Console.WriteLine("Введите 2e натуральное число: ");
 int n = Convert.ToInt32(Console.ReadLine());
+if (n <=  0) Console.WriteLine("Введённое вами число не является натуральным. Повторите ввод.");
 if (n < m) 
 {
     int temp = n;

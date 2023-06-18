@@ -18,8 +18,9 @@
 // 3 - Слушатель написал корректную программу
 //  с использованием рекурсии по вычислению функции Аккермана
 
-Console.WriteLine("Введите число: ");
+Console.WriteLine("Введите натуральное число: ");
 int number = Convert.ToInt32(Console.ReadLine());
+if (number <=  0) Console.WriteLine("Введённое вами число не является натуральным. Повторите ввод.");
 int temp = number;
 Console.Write($"N = {number} -> '");
 NaturalNumbersBackWards(number, temp);
