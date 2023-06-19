@@ -31,7 +31,7 @@ if (n < m)
     n = m;
     m = temp;
 }
-SumElementsInGap(m, n, 0);
+if (m <=  0 && n <=0) SumElementsInGap(m, n, 0);
 
 void SumElementsInGap (int number1, int number2, int sum = 0)
 {

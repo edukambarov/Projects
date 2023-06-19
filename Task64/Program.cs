@@ -23,7 +23,7 @@ int number = Convert.ToInt32(Console.ReadLine());
 if (number <=  0) Console.WriteLine("Введённое вами число не является натуральным. Повторите ввод.");
 int temp = number;
 Console.Write($"N = {number} -> '");
-NaturalNumbersBackWards(number, temp);
+if (number <=  0) NaturalNumbersBackWards(number, temp);
 
 void NaturalNumbersBackWards (int num, int numFixed) // num = 5
 {

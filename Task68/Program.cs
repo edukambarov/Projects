@@ -26,7 +26,7 @@ if (m <=  0) Console.WriteLine("Введённое вами число не яв
 Console.WriteLine("Введите 2e натуральное число: ");
 int n = Convert.ToInt32(Console.ReadLine());
 if (n <=  0) Console.WriteLine("Введённое вами число не является натуральным. Повторите ввод.");
-Console.WriteLine($"m = {m}, n = {n} -> A({m},{n}) = {Ackermann(m, n)}.");
+if (m <=  0 && n <=0) Console.WriteLine($"m = {m}, n = {n} -> A({m},{n}) = {Ackermann(m, n)}.");
 
 
 int Ackermann(int num1, int num2)
